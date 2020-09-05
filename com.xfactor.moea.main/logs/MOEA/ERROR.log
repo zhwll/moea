@@ -1,0 +1,44 @@
+[ERROR] [MOEA] 2020-09-05 09:48:17: 66705 [ERROR] [Thread-4] ( SqlExceptionHelper.java,131 ) - Connections could not be acquired from the underlying database!
+[ERROR] [MOEA] 2020-09-05 12:42:35: 6969 [ERROR] [JavaFX Application Thread] ( MainContext.java,51 ) - 没有找到FXML文件：/views/menu/menu.fxml
+[ERROR] [MOEA] 2020-09-05 12:44:25: 7976 [ERROR] [JavaFX Application Thread] ( MainContext.java,51 ) - 没有找到FXML文件：/views/menu/menu.fxml
+[ERROR] [MOEA] 2020-09-05 12:49:02: 5441 [ERROR] [JavaFX Application Thread] ( MainContext.java,51 ) - 没有找到FXML文件：/views/menu/menu.fxml
+[ERROR] [MOEA] 2020-09-05 14:14:00: 3979 [ERROR] [JavaFX Application Thread] ( Main.java,64 ) - 系统启动失败：
+java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key title
+	at java.util.ResourceBundle.getObject(ResourceBundle.java:564) ~[?:?]
+	at java.util.ResourceBundle.getString(ResourceBundle.java:521) ~[?:?]
+	at com.xfactor.moea.main.Main.start(Main.java:54) ~[classes/:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:846) ~[javafx.graphics.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:455) ~[javafx.graphics.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:428) ~[javafx.graphics.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:427) ~[javafx.graphics.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96) ~[javafx.graphics.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[javafx.graphics.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174) ~[javafx.graphics.jar:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+[ERROR] [MOEA] 2020-09-05 14:21:06: 3169 [ERROR] [JavaFX Application Thread] ( Main.java,62 ) - 系统启动失败：
+java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key title
+	at java.util.ResourceBundle.getObject(ResourceBundle.java:564) ~[?:?]
+	at java.util.ResourceBundle.getString(ResourceBundle.java:521) ~[?:?]
+	at com.xfactor.moea.main.Main.start(Main.java:52) ~[classes/:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:846) ~[javafx.graphics.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:455) ~[javafx.graphics.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:428) ~[javafx.graphics.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:427) ~[javafx.graphics.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96) ~[javafx.graphics.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[javafx.graphics.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174) ~[javafx.graphics.jar:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+[ERROR] [MOEA] 2020-09-05 14:36:01: 2249 [ERROR] [JavaFX Application Thread] ( Main.java,70 ) - 系统启动失败：
+com.xfactor.moea.main.exception.MoeaException: 版权文字不符合规则！
+	at com.xfactor.moea.main.Main.start(Main.java:58) ~[classes/:?]
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:846) ~[javafx.graphics.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:455) ~[javafx.graphics.jar:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:428) ~[javafx.graphics.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:427) ~[javafx.graphics.jar:?]
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96) ~[javafx.graphics.jar:?]
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[javafx.graphics.jar:?]
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174) ~[javafx.graphics.jar:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]

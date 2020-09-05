@@ -1,0 +1,12 @@
+/*左侧工作区按钮 
+ * - 最近
+ * - 新建
+ * - 打开
+ * - 案例
+ * */
+.wsButtons {
+	-fx-background-color: transparent;
+}
+.wsButtons:hover {
+	-fx-background-color: #C2D5F2;
+}

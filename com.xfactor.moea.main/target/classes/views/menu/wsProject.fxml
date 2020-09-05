@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="PaneMain" prefHeight="749.0" prefWidth="1298.0" stylesheets="/resources/css/wsProject/wsProject.css" 
+	xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xfactor.moea.main.controller.menu.WsProjectController">
+   <children>
+      <AnchorPane minWidth="-Infinity" prefHeight="749.0" prefWidth="208.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="33.0" layoutY="34.0" prefHeight="45.0" prefWidth="94.0" text="项目">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <VBox layoutX="33.0" layoutY="90.0" prefHeight="164.0" prefWidth="157.0" spacing="6.0">
+               <children>
+                  <HBox fx:id="btnProjectRecently" styleClass="wsButtons">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="82.0" text="  最近">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resource/images/wsProject/icons8-time-machine-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="btnProjectNew" layoutX="10.0" layoutY="10.0" styleClass="wsButtons">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="101.0" text="  新建">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resource/images/wsProject/icons8-add-file-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="btnProjectOpen" layoutX="10.0" layoutY="52.0" styleClass="wsButtons">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="101.0" text="  打开">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resource/images/wsProject/icons8-browse-folder-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="btnProjectTutorial" layoutX="10.0" layoutY="94.0" styleClass="wsButtons">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="105.0" text="  案例">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resource/images/wsProject/icons8-course-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="186.0" layoutY="2.0" orientation="VERTICAL" prefHeight="745.0" prefWidth="13.0" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0" />
+      <AnchorPane fx:id="wsProjectContainer" layoutX="199.0" layoutY="2.0" prefHeight="749.0" prefWidth="1105.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

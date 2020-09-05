@@ -1,0 +1,146 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.xfactor.moea</groupId>
+		<artifactId>com.xfactor.moea</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>com.xfactor.moea.main</artifactId>
+	<properties>
+		<!-- Using utf-8 encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<skip.surefire.tests>true</skip.surefire.tests>
+		<skip.failsafe.tests>true</skip.failsafe.tests>
+		<!-- JDK setting -->
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.testTarget>11</maven.compiler.testTarget>
+		<maven.compiler.testSource>11</maven.compiler.testSource>
+		
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.xfactor.moea</groupId>
+			<artifactId>com.xfactor.moea.db</artifactId>
+			<version>${moea.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.xfactor.moea</groupId>
+			<artifactId>com.xfactor.moea.base</artifactId>
+			<version>${moea.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-swing</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-web</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<!-- 输出到build目录 -->
+		<resources>
+		
+		
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		
+			<resource>
+				<!-- 复制 外部配置文文件 -->  
+				<directory>config</directory>
+				<targetPath>${project.build.directory}/bulid/config</targetPath>
+				<excludes>
+					<exclude>db/**</exclude>
+				</excludes>
+			</resource>
+			
+			<resource>
+				<!-- run.bat 复制到根目录-->  
+				<directory>config</directory>
+				<targetPath>${project.build.directory}/bulid</targetPath>
+				<includes>
+					<include>run.bat</include>
+				</includes>
+			</resource>
+			
+			
+			<resource>
+				<!-- 复制 一份内部配置文件到 外部config -->  
+				<directory>src/main/resources</directory>
+				<targetPath>${project.build.directory}/bulid/config</targetPath>
+				<includes>
+					<include>i18n/**</include>
+					<include>applicationconfig.xml</include>
+					<include>config.properties</include>
+				</includes>
+			</resource>
+			
+			
+			
+			
+			<resource>
+				<!-- 复制外部依赖jar包,方正lib中的 -->  
+			    <directory>lib</directory>
+			    <targetPath>${project.build.directory}/bulid/lib</targetPath>
+			    <includes>
+			      <include>**/*.jar</include>
+			    </includes>
+			 </resource>
+		</resources>
+		<plugins>
+			<!-- 打包jar文件时，配置manifest文件，加入lib包的jar依赖 -->  
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>  
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>  
+                	<outputDirectory>  
+                                ${project.build.directory}/bulid
+                    </outputDirectory>  
+                    <archive>  
+                        <manifest>  
+                            <addClasspath>true</addClasspath>  
+                            <classpathPrefix>lib/</classpathPrefix>  
+                            <mainClass>com.xfactor.moea.main.Main</mainClass>  
+                        </manifest>  
+                    </archive>
+                    <excludes> 
+                        <exclude>splash/**</exclude> 
+                    </excludes>
+                </configuration>  
+            </plugin>  
+            <!-- 拷贝依赖的maven的jar包到lib目录 -->  
+            <plugin>  
+                <groupId>org.apache.maven.plugins</groupId>  
+                <artifactId>maven-dependency-plugin</artifactId>  
+                <executions>  
+                    <execution>  
+                        <id>copy-dependencies</id>  
+                        <phase>prepare-package</phase>  
+                        <goals>  
+                            <goal>copy-dependencies</goal>  
+                        </goals>  
+                        <configuration>  
+                            <outputDirectory>  
+                                ${project.build.directory}/bulid/lib  
+                            </outputDirectory>  
+                        </configuration>  
+                    </execution>  
+                </executions>  
+            </plugin>
+			
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="623.0" prefWidth="921.0" stylesheets="/resources/css/menu/menu.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xfactor.moea.main.controller.menu.MenuController">
+   <children>
+      <AnchorPane layoutX="100.0" layoutY="24.0" prefHeight="553.0" prefWidth="698.0" style="-fx-background-color: red;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="23.0">
+         <children>
+            <ScrollPane prefHeight="575.0" prefWidth="820.0" style="-fx-fit-to-height: true; -fx-fit-to-width: true;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <content>
+                <AnchorPane fx:id="wsPane" prefHeight="540.0" prefWidth="763.0" />
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="30.0" prefWidth="800.0" styleClass="titleBar" text="MOEASoftware 2020" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <HBox alignment="TOP_RIGHT" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+         <children>
+            <Button fx:id="btnWindowMinimize" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#modeMinimize" prefHeight="30.0" prefWidth="34.0" styleClass="decorationButtonMinimize" />
+            <Button fx:id="btnWindowMaximize" alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#modeMaximize" prefHeight="30.0" prefWidth="34.0" styleClass="decorationButtonMaximize" />
+            <Button fx:id="btnWindowClose" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="66.0" layoutY="10.0" maxWidth="50.0" mnemonicParsing="false" onAction="#modeClose" prefHeight="30.0" prefWidth="34.0" styleClass="decorationButtonClose" />
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="600.0" prefWidth="103.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="2.9000000953674316" layoutY="21.899999618530273" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="25.0">
+               <children>
+                  <Button contentDisplay="TOP" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #FFFFFF; -fx-font-size: 1.3em; -fx-font-weight: bold;" text="%menu.menu.title" textFill="#b28888">
+                     <font>
+                        <Font name="Courier New Bold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+            </HBox>
+            <VBox layoutY="64.0" prefHeight="136.0" prefWidth="100.0">
+               <children>
+                  <HBox fx:id="btnWsProject" alignment="CENTER_LEFT" spacing="6.0" styleClass="menuWorkspace">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="项目" textAlignment="JUSTIFY" textFill="#718fbb" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <Separator layoutX="10.0" layoutY="10.0" prefHeight="1.0" prefWidth="200.0" styleClass="menuBarSeparator">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </Separator>
+                  <HBox fx:id="btnWsModelling" alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" spacing="6.0" styleClass="menuWorkspace">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="建模" textAlignment="JUSTIFY" textFill="#718fbb" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="btnWsOptimization" alignment="CENTER_LEFT" layoutX="10.0" layoutY="28.0" spacing="6.0" styleClass="menuWorkspace">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="优化" textAlignment="JUSTIFY" textFill="#718fbb" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="btnWsDataAnalysis" alignment="CENTER_LEFT" layoutX="10.0" layoutY="46.0" spacing="6.0" styleClass="menuWorkspace">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="数据分析" textAlignment="JUSTIFY" textFill="#718fbb" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <Separator layoutX="10.0" layoutY="10.0" prefHeight="1.0" prefWidth="200.0" styleClass="menuBarSeparator">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </Separator>
+                  <HBox fx:id="btnWsOptions" alignment="CENTER_LEFT" layoutX="10.0" layoutY="64.0" spacing="6.0" styleClass="menuWorkspace">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="设置" textAlignment="JUSTIFY" textFill="#718fbb" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="btnWsHelp" alignment="CENTER_LEFT" layoutX="10.0" layoutY="128.0" spacing="6.0" styleClass="menuWorkspace">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="帮助" textAlignment="JUSTIFY" textFill="#718fbb" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnWindowResize" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" graphicTextGap="2.0" layoutX="870.0" layoutY="598.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="11.0" minWidth="19.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="11.0" prefWidth="54.0" styleClass="decorationButtonResize" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="3.0" />
+   </children>
+</AnchorPane>

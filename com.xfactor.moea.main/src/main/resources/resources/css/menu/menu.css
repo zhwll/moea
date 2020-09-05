@@ -1,0 +1,97 @@
+/*主窗体 */
+.mainWindow{
+	-fx-border-color:#2A579A;
+	-fx-border-type:#2A579A;
+}
+/*上方标题栏 */
+.titleBar{
+	-fx-background-color:#2A579A;
+	-fx-text-fill:#718FBB;
+}
+/*左侧菜单栏 */
+.sidebar{
+	-fx-background-color:#2A579A;
+}
+/*左侧菜单项目 */
+.menuWorkspace{
+	-fx-background-color: transparent;
+}
+.menuWorkspace:hover{
+	-fx-background-color: #2C3135;
+}
+/*左侧分割线 */
+.menuBarSeparator .line{
+	-fx-border-width: 0 0 1 0;
+	-fx-border-color:#718FBB;
+}
+/*
+*	最小窗体按钮
+*/
+.decorationButtonMinimize{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("../../images/menu/minimize.png");
+    -fx-background-repeat:no-repeat;
+}
+ .decorationButtonMinimize:hover{
+    -fx-background-color: null;
+    -fx-background-image:url("../../images/menu/minimize-hover.png");
+    -fx-background-repeat:no-repeat;
+}
+/*
+*	最大窗体按钮
+*/
+.decorationButtonMaximize{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("../../images/menu/maximize.png");
+    -fx-background-repeat:no-repeat;
+}
+.decorationButtonMaximize:hover{
+    -fx-background-color: null;
+    -fx-background-image:url("../../images/menu/maximize-hover.png");
+    -fx-background-repeat:no-repeat;
+}
+/*
+*	恢复窗体按钮
+*/
+.decorationButtonRestore{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("../../images/menu/restore.png");
+    -fx-background-repeat:no-repeat;
+}
+.decorationButtonRestore:hover{
+    -fx-background-color: null;
+    -fx-background-image:url("../../images/menu/restore-hover.png");
+    -fx-background-repeat:no-repeat;
+}
+/*
+*	Resize 按钮
+*/
+.decorationButtonResize{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("../../images/menu/resize.png");
+    -fx-background-repeat:no-repeat;
+    -fx-background-position:right;
+}
+/*
+*	关闭窗体按钮
+*/
+.decorationButtonClose{
+    -fx-background-radius: 0;
+    -fx-border-style: null;
+    -fx-background-color: null;
+    -fx-background-image:url("../../images/menu/close.png");
+    -fx-background-repeat:no-repeat;
+}
+.decorationButtonClose:hover{
+    -fx-border-color: null;
+    -fx-background-image:url("../../images/menu/close-hover.png");
+    -fx-background-repeat:no-repeat;
+}
